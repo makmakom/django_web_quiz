@@ -86,3 +86,6 @@ class Result(BaseModel):
         # return max(0, self.num_correct_answers - self.num_incorrect_answers)
         return self.num_correct_answers - self.num_incorrect_answers
 
+    def __str__(self):
+        return f'{self.user}: {self.exam} {self.num_correct_answers} {self.num_incorrect_answers}'
+
